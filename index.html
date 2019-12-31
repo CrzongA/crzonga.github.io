@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body id="bodyid">
-    <div class="container" >
-    	<h2><span >countdown to New Year</span> 2020</h2>
+    <div id="containerid" class="container" >
+    	<h2><span>countdown to Year</span> 2020</h2>
         <div class="countdown">
         	<div id="day">NA</div>
 			<div id="hour">NA</div>
@@ -18,9 +18,12 @@
         </div>
   <script type="text/javascript">
   document.getElementById('bodyid').addEventListener("click", () =>{  
-	  document.getElementById('bodyid').style = "background: #000 url(mouse.jpg)";
-	  var newImg = "mouse.jpg";
-	  changebg(newImg);
+	  document.getElementById('bodyid').style = "background: #000 url(mouse.jpg); background-size:cover;";
+	  document.getElementById('containerid').style = "background: #000 url(mouse.jpg); background-size:cover;";
+
+	//   var newImg = "mouse.jpg";
+	//   changebg('bodyid',newImg);
+	//   changebg('container',newImg);
 })
     var countDate = new Date('Jan 1,2020 00:00:00').getTime();
 	function newYear(){
@@ -44,12 +47,13 @@
 
 		if (gap<=0){
 			var newImg = "mouse.jpg";
-			changebg(newImg);
+			changebg('bodyid',newImg);
+			changebg('container',newImg);
 		}
 		}
 		
-	function changebg(newImg){
-		document.getElementById('bodyid').style = `background: #000 url(${newImg})`;
+	function changebg(tagname, newImg){
+		document.getElementById(tagname).style = `background: #000 url(${newImg}) cover`;
 	}
 
 		setInterval(function(){
