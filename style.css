@@ -8,7 +8,7 @@
 }
 body
 {
-	background: #000 url(bg.jpg);    /*#333*/
+	background: #000 url(pig.jpg);    /*#333*/
 	background-size: cover;
 	
 }
@@ -19,7 +19,7 @@ body
 	left: 100px;
 	right: 100px;
 	bottom: 80px;
-	background: url(bg.jpg); /*#fff*/
+	background: url(pig.jpg); /*#fff*/
 	background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -78,7 +78,7 @@ body
  }
 	 .countdown div#day:before
 	 {
-	 content: 'days';}
+	 content: 'day';}
 	 
 	 .countdown div#hour:before
 	 {
